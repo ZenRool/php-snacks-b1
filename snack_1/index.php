@@ -13,21 +13,31 @@
         <?php
             $teams = ["AC Picchia", "The Drunkest", "Los Angeles Crackers", "Los Random", "Slam Drunk", "Gli Sbronzi di Riace", "Chicago Inside", "Sailor Rum", "Herta Vernello", "Le scarpe della LIDL", "Baston Celtics", "Miami Hut", "Pro Secco", "Quattordici"];
             $matchs = [];
+            // Finchè ci sono ancora squadre da matchare
             while( count($teams) != 0 ) {
+                // Prendo numero random per la squadra di casa
                 $randHome = rand(0, count($teams) - 1);
+                // Prendo la squadra di casa
                 $home = $teams[$randHome];
+                // tolglo la squadra di casa dal array
                 array_splice($teams,$randHome,1);
+                // Prendo numero random per la squadra in trasferta 
                 $randAway = rand(0, count($teams) - 1);
+                // ---
                 $away = $teams[$randAway];
+                // ---
                 array_splice($teams,$randAway,1);
+                // randomizzo i punti, la squadra di casa può fare più punti
                 $randHomePoint = rand(40, 107);
                 $randAwayPoint = rand(40, 104);
+                // do i valori al array partita
                 $match = [
                     "home" => $home,
                     "away" => $away,
                     "homePoints" => $randHomePoint,
                     "awayPoints" => $randAwayPoint,
                 ];
+                // aggiungo il valore della partita nel array di partite
                 $matchs[] = $match;
             }
             foreach($matchs as $current) {
