@@ -9,7 +9,7 @@
 <body style="text-align: center;">
     <h1> Giornata <?php echo rand(1,24) ?> del campionato </h1>
     <hr>
-    <ul style ="text-decoration: none; text-align: center; margin: auto 0;">
+    <ul style ="list-style: none; text-align: center; margin: auto 0;">
         <?php
             $teams = ["AC Picchia", "The Drunkest", "Los Angeles Crackers", "Los Random", "Slam Drunk", "Gli Sbronzi di Riace", "Chicago Inside", "Sailor Rum", "Herta Vernello", "Le scarpe della LIDL", "Baston Celtics", "Miami Hut", "Pro Secco", "Quattordici"];
             $matchs = [];
